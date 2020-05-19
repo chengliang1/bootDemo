@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.czxy.boot_demo.mapper.AccountMapper">
+
+    <resultMap id="BaseResultMap" type="com.czxy.boot_demo.entity.Account">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="userName" jdbcType="VARCHAR" property="userName" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+    </resultMap>
+
+    <select id="login" resultType="com.czxy.boot_demo.entity.Account">
+        select * from Account where userName = #{userName}
+    </select>
+
+    <select id="AllResult" resultType="com.czxy.boot_demo.entity.Account">
+        select * from Account where id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.czxy.boot_demo.entity.Account">
+        select * from Account
+    </select>
+
+    <delete id="deleteAccount" parameterType="int">
+		delete from Accoount where id = #{id}
+	</delete>
+
+
+</mapper>

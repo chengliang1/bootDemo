@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script type="text/javascript" src="/asserts/js/jquery-3.0.0.js"></script>
+    <link rel="stylesheet" th:href="@{/asserts/css/bootstrap-table.css}">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style: none;
+        }
+        .container{
+            width: 800px;
+            height: 500px;
+        }
+        th{
+            border: 1px solid grey;
+        }
+        tr td {
+            text-align: center;
+            border: 1px solid grey;
+        }
+        .content{
+            width: 1200px;
+            height: 700px;
+            margin: 20px 50px;
+            border: 1px seagreen solid;
+        }
+        .left{
+            width: 20%;
+            height: 100%;
+            border-right: 1px salmon solid;
+            float: left;
+            background: seagreen;
+        }
+        .right{
+            width: 79%;
+            height: 100%;
+            float: right;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .right-table{
+            width: 700px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        .right-main{
+            margin: 0 auto;
+        }
+
+
+    </style>
+</head>
+<body>
+<div  class="content">
+    <div th:fragment="leftbar" class="left">
+        <a th:href="@{/accounts}">员工管理</a>
+    </div>
+
+</div>
+
+<script type="text/javascript" th:src="@{/asserts/js/bootstrap-table.js}"></script>
+<script type="text/javascript" th:src="@{/asserts/js/bootstrap-table-zh-CN.js}"></script>
+
+</body>
+</html>
